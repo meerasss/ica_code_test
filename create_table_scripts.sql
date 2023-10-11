@@ -1,6 +1,4 @@
 CREATE EXTERNAL TABLE IF NOT EXISTS temperature_data(
-  `year_yyyy` STRING,
-  `month_mm` STRING,
   `day_dd` STRING,
   `morn` STRING,
   `noon` STRING,
@@ -17,8 +15,6 @@ LOCATION '/data/temperature_data/';
 -------------------------------------------------
 
 CREATE EXTERNAL TABLE IF NOT EXISTS pressure_data(
-  `year_yyyy` STRING,
-  `month_mm` STRING,
   `day_dd` STRING,
   `obs_val1` STRING,
   `obs_val2` STRING,

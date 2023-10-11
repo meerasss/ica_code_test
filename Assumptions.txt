@@ -1,0 +1,6 @@
+1) Table created in external path in hdfs locations- /data/temperature_data/  , /data/pressure_data/
+2) File input location path - path1//temperature_data.txt, path2//pressure_data.txt
+3) Parquet files saved at locations in partitioned fomat- /data/temperature_data/temperature.parquet, /data/pressure_data/pressure.parquet
+4) Temperature data file have same number of columns, whereas pressure data have varying columns.
+5) Assuming single file is processed each day or at a tme as input.
+6) Code is not compiled as I dont have the setup.The other standards and syntax were followed for pyspark.

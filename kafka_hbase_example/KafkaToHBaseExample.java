@@ -61,8 +61,8 @@ public class KafkaToHBaseExample {
                         // Modify the column name and value as per the HBase schema,(sample hiven in Assumption.txt)
                         Put put = new Put(Bytes.toBytes(key));
                         put.addColumn(Bytes.toBytes(HBASE_COLUMN_FAMILY), Bytes.toBytes("cust_id"), Bytes.toBytes(value));
-						put.addColumn(Bytes.toBytes(HBASE_COLUMN_FAMILY), Bytes.toBytes("cust_name"), Bytes.toBytes(value));
-						put.addColumn(Bytes.toBytes(HBASE_COLUMN_FAMILY), Bytes.toBytes("country"), Bytes.toBytes(value));
+			put.addColumn(Bytes.toBytes(HBASE_COLUMN_FAMILY), Bytes.toBytes("cust_name"), Bytes.toBytes(value));
+			put.addColumn(Bytes.toBytes(HBASE_COLUMN_FAMILY), Bytes.toBytes("country"), Bytes.toBytes(value));
 
                         table.put(put);
                     }

@@ -51,14 +51,14 @@ public class KafkaToHBaseExample {
             rdd.foreachPartition(records -> {
                 org.apache.hadoop.conf.Configuration hbaseConfig = HBaseConfiguration.create();
                 try (Connection connection = ConnectionFactory.createConnection(hbaseConfig);
-                     Table table = connection.getTable(TableName.valueOf(HBASE_TABLE))) {
+                     Table table = connection.getTable(TableName.valueOf(HBASE_TABLE_NAME))) {
 
                     while (records.hasNext()) {
                         Tuple2<String, String> record = records.next();
                         String key = record._1();
                         String value = record._2();
 
-                        // Modify the column name and value as per your HBase schema
+                        // Modify the column name and value as per the HBase schema,(sample hiven in Assumption.txt)
                         Put put = new Put(Bytes.toBytes(key));
                         put.addColumn(Bytes.toBytes(HBASE_COLUMN_FAMILY), Bytes.toBytes("cust_id"), Bytes.toBytes(value));
 						put.addColumn(Bytes.toBytes(HBASE_COLUMN_FAMILY), Bytes.toBytes("cust_name"), Bytes.toBytes(value));

@@ -1,0 +1,7 @@
+
+Assuming the streaming data ,has the following format of key and values.
+{
+  "key": "user1",
+  "value": "{'cust_id': '111', 'cust_name': 'ABC', 'country': 'India'}"
+}
+
